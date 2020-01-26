@@ -5,8 +5,8 @@ This is my first attempt at an electron app.
 
 ## Installation
 * If you don't already have jq (https://stedolan.github.io/jq/) you will need to install that.  
-** For Mac, you can use brew to install it: 'brew install jq'
-** For Ubuntu sudo apt-get install -y jq
+	For Mac, you can use brew to install it: `brew install jq`<br>
+	For Ubuntu `sudo apt-get install -y jq`
 * npm install
 * npm start
 
