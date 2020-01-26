@@ -1,0 +1,12 @@
+div.dataTables_length {
+  // display: none;
+}
+
+
+tbody tr {
+  cursor: pointer;
+}
+
+div.dataTables_length {
+  display: none;
+}
