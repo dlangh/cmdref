@@ -113,7 +113,7 @@ const mainMenuTemplate = [
   ...(isMac ? [{
     label: app.name,
     submenu: [
-      { label: 'About',
+      { label: 'About CMDREF',
         click() { createAboutWindow(); }
       },
       { type: 'separator' },
