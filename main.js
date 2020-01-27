@@ -44,11 +44,6 @@ app.on('ready', function() {
   
 
 
-  //genJsonWindow.on('ready-to-show', function() {
-    // genJsonWindow.show();
-  //})
-
-
   const menu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(menu);
 });
@@ -78,7 +73,7 @@ function createHelpWindow() {
   helpWindow = new BrowserWindow({
     width: 300,
     height: 200,
-    title: 'About Command Reference',
+    title: 'Help Command Reference',
     webPreferences: {
       nodeIntegration: true
     }
@@ -91,12 +86,36 @@ function createHelpWindow() {
   }));  
 }
 
+function createAboutWindow() {
+  aboutWindow = new BrowserWindow({
+    width: 300,
+    height: 200,
+    title: 'About Command Reference',
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+
+  aboutWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'aboutWindow.html'),
+    protocol: 'file',
+    slashes: true
+  }));
+   // Garbage collection handle
+   aboutWindow.on('close', function() {
+    aboutWindow = null;
+  });  
+}
+
+
 const mainMenuTemplate = [
   // { role: 'appMenu' }
   ...(isMac ? [{
     label: app.name,
     submenu: [
-      { role: 'about' },
+      { label: 'About',
+        click() { createAboutWindow(); }
+      },
       { type: 'separator' },
       { role: 'services' },
       { type: 'separator' },
