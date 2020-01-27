@@ -10,7 +10,7 @@
     "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
   },
   "author": "Donald M Langhorne",
-  "license": "MIT",
+  "license": "GPL",
   "dependencies": {
     "electron": "^7.1.2",
     "electron-builder": "^14.1.1"
