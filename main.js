@@ -42,21 +42,7 @@ app.on('ready', function() {
     app.quit();
   });
   
-  genJsonWindow = new BrowserWindow({
-    width: (400),
-    height: (250),
-    webPreferences: {
-      nodeIntegration: true,
-      show: false
-    }
-  });
- 
-  // load html file into window
-  genJsonWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'genjsonWindow.html'),
-    protocol: 'file',
-    slashes: true
-  }));
+
 
   //genJsonWindow.on('ready-to-show', function() {
     // genJsonWindow.show();
@@ -66,6 +52,27 @@ app.on('ready', function() {
   const menu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(menu);
 });
+
+function createGenJsonWindow() {
+  genJsonWindow = new BrowserWindow({
+    width: (400),
+    height: (250),
+    webPreferences: {
+     nodeIntegration: true,
+      show: false
+    }
+  });
+
+  // load html file into window
+  genJsonWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'genjsonWindow.html'),
+    protocol: 'file',
+    slashes: true
+  }));
+
+}
+
+
 
 function createHelpWindow() {
   helpWindow = new BrowserWindow({

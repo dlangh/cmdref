@@ -110,6 +110,9 @@ $(document).ready(function() {
 
 var createTable = function(tableName) {
   var table = $('#' + tableName).DataTable( {
+    "search": {
+      "regex": true
+    },
     "ajax": { 
       url: "data/man_" + tableName + ".json",
       dataSrc: ""
