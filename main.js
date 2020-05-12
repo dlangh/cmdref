@@ -19,8 +19,8 @@ app.on('ready', function() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
   mainWindow = new BrowserWindow({
-    width: (1100),
-    height: (650),
+    width: (1200),
+    height: (750),
     webPreferences: {
       nodeIntegration: true,
       show: false
