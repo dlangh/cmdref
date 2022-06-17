@@ -12,7 +12,7 @@
   "author": "Donald M Langhorne",
   "license": "GPL",
   "dependencies": {
-    "electron": "^7.1.2",
+    "electron": "^15.5.5",
     "electron-builder": "^14.1.1",
     "minimist": "^0.2.1"
   }
