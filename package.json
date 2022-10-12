@@ -13,7 +13,7 @@
   "license": "GPL",
   "dependencies": {
     "electron": "^7.1.2",
-    "electron-builder": "^14.1.1",
+    "electron-builder": "^23.6.0",
     "minimist": "^0.2.1"
   }
 }
